@@ -1,17 +1,16 @@
-/* //PRIMARY
-$scissorsGradient: #ec9e0e, #eca922;
-$paperGradient: #4865f4, #5671f5;
-$rockGradient: #dc2e4e, #dd405d;
-$lizardGradient: #834fe3, #8c5de5;
-$cyan: #40b9ce, #52bed1;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
-//NEUTRAL
-$darkText: #3b4363;
-$scoreText: #2a46c0;
-$headerOutline: #606e85;
-
-//BACKGROUND
-$radialGradient: #1f3756, #141539; */
+:root {
+    --scissors-gradient: #ec9e0e, #eca922;
+    --paper-gradient: #4865f4, #5671f5;
+    --rock-gradient: #dc2e4e, #dd405d;
+    --lizard-gradient: #834fe3, #8c5de5;
+    --cyan: #40b9ce, #52bed1;
+    --dark-text: #3b4363;
+    --score-text: #2a46c0;
+    --header-outline: #606e85;
+    --radial-gradient: #1f3756, #141539;
+}
 
 * {
     margin: 0;
@@ -20,7 +19,8 @@ $radialGradient: #1f3756, #141539; */
 }
 
 body {
-    background: radial-gradient(at top, --var(radialGradient));
+    background: radial-gradient(at top, var(--radial-gradient));
     min-height: 100vh;
     min-width: 100vw;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
