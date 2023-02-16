@@ -24,12 +24,16 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
+.header,
+.main {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
 .header {
     background-color: transparent;
     display: flex;
     justify-content: space-between;
-    max-width: 600px;
-    margin: 50px auto;
     box-shadow: 0 0 0 2px var(--header-outline);
     border-radius: 10px;
 }
@@ -66,4 +70,36 @@ body {
     font-size: 52px;
     font-weight: 700;
     color: var(--dark-text);
+}
+
+.game__start {
+    aspect-ratio: 313 / 278;
+    background-image: url('../images/bg-triangle.svg');
+    background-size: cover;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.game__start .option-btn {
+    position: absolute;
+    border: none;
+}
+
+.game__start .option-btn--paper {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.game__start .option-btn--scissors {
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.game__start .option-btn--rock {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
