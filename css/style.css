@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
 :root {
+    --color-main: #ffffff;
     --scissors-gradient: #ec9e0e, #eca922;
     --paper-gradient: #4865f4, #5671f5;
     --rock-gradient: #dc2e4e, #dd405d;
-    --lizard-gradient: #834fe3, #8c5de5;
     --cyan: #40b9ce, #52bed1;
     --dark-text: #3b4363;
     --score-text: #2a46c0;
@@ -48,7 +48,7 @@ body {
 }
 
 .score {
-    background-color: #fff;
+    background-color: var(--color-main);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,6 +72,10 @@ body {
     color: var(--dark-text);
 }
 
+.main {
+    margin-top: 200px;
+}
+
 .game__start {
     aspect-ratio: 313 / 278;
     background-image: url('../images/bg-triangle.svg');
@@ -81,24 +85,51 @@ body {
     position: relative;
 }
 
-.game__start .option-btn {
+.game__start .btn {
     position: absolute;
-    border: none;
+    width: 50%;
 }
 
-.game__start .option-btn--paper {
+.btn {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+.btn img {
+    width: 50%;
+}
+
+.btn__image-container {
+    background: var(--color-main);
+    border-radius: 50%;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn--paper {
+    background: linear-gradient(var(--paper-gradient));
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
 }
 
-.game__start .option-btn--scissors {
+.btn--scissors {
+    background: linear-gradient(var(--scissors-gradient));
     top: 0;
     right: 0;
     transform: translate(50%, -50%);
 }
 
-.game__start .option-btn--rock {
+.btn--rock {
+    background: linear-gradient(var(--rock-gradient));
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
