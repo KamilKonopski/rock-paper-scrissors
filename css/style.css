@@ -18,7 +18,7 @@
     box-sizing: border-box;
 }
 
-body {
+html {
     background: radial-gradient(at top, var(--radial-gradient));
     min-height: 100vh;
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -133,6 +133,27 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.rules-btn {
+    border: 2px solid var(--header-outline);
+    border-radius: 8px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 20%;
+    right: 20%;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--color-main);
+    cursor: pointer;
+    padding: 10px 30px;
+    transition: all 0.2s linear;
+}
+
+.rules-btn:hover {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: var(--score-text);
 }
 
 .rules,
