@@ -134,3 +134,50 @@ body {
     left: 50%;
     transform: translateX(-50%);
 }
+
+.rules,
+.overlay {
+    display: none;
+}
+
+.rules.active {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 350px;
+    height: 400px;
+    background-color: var(--color-main);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px var(--header-outline);
+    z-index: 1;
+}
+
+.rules__heading {
+    font-size: 28px;
+    text-transform: uppercase;
+    color: var(--dark-text);
+}
+
+.rules-btn--close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay.active {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: all;
+}
