@@ -11,3 +11,4 @@ rulesCloseBtn === null || rulesCloseBtn === void 0 ? void 0 : rulesCloseBtn.addE
     (_a = document.querySelector(".rules")) === null || _a === void 0 ? void 0 : _a.classList.remove("active");
     (_b = document.querySelector(".overlay")) === null || _b === void 0 ? void 0 : _b.classList.remove("active");
 });
+//# sourceMappingURL=app.js.map
