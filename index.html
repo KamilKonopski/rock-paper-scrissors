@@ -15,13 +15,13 @@
 	</head>
 	<body>
 		<header class="header">
-			<div class="header__logo">
+			<h1 class="header__logo">
 				<img
 					class="header__image"
 					src="./images/logo.svg"
 					alt="rock, paper, scissors"
 				/>
-			</div>
+			</h1>
 			<div class="score">
 				<span class="score__text">score</span>
 				<span class="score__number">12</span>
@@ -45,6 +45,20 @@
 					</div>
 				</button>
 			</section>
+			<button class="rules-btn">rules</button>
+			<div class="rules">
+				<h2 class="rules__heading">rules</h2>
+				<button class="rules-btn--close">
+					<img src="./images/icon-close.svg" alt="close rules modal" />
+				</button>
+				<div class="rules__image">
+					<img
+						src="./images/image-rules.svg"
+						alt="rules: paper beats rock, rock beats scissors, scissors beats paper"
+					/>
+				</div>
+			</div>
+			<div class="overlay"></div>
 		</main>
 		<!-- <div class="attribution">
 			Challenge by
