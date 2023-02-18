@@ -10,8 +10,11 @@ export default class Score {
         if (isUserWin) {
             this.score++;
         }
-        else if (!isUserWin && isUserWin !== undefined) {
+        else if (!isUserWin) {
             this.score--;
+        }
+        else {
+            return;
         }
     }
 }
