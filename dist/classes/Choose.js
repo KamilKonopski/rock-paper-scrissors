@@ -21,5 +21,4 @@ export default class Choose {
         return aiOption;
     }
 }
-const choose = new Choose();
 //# sourceMappingURL=Choose.js.map
