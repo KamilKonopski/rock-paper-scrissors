@@ -87,7 +87,6 @@ html {
 
 .game__start .btn {
     position: absolute;
-    width: 50%;
 }
 
 .btn {
@@ -98,6 +97,7 @@ html {
     border-radius: 50%;
     aspect-ratio: 1/1;
     cursor: pointer;
+    width: 50%;
 }
 
 .btn img {
