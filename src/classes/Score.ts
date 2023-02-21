@@ -10,7 +10,7 @@ export default class Score {
 	updateScore(isUserWin: boolean | null) {
 		if (isUserWin) {
 			this.score++;
-		} else if (!isUserWin) {
+		} else if (!isUserWin && isUserWin !== null) {
 			this.score--;
 		} else {
 			return;
