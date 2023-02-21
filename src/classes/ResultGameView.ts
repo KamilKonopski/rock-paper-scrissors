@@ -1,5 +1,10 @@
 export default class ResultGameView {
-	static createResultGameView(player: string, ai: string) {
+	static createResultGameView(
+		player: string,
+		ai: string,
+		text: string,
+		playAgain: () => void
+	) {
 		const resultGameSection = document.createElement("section");
 		resultGameSection.classList.add("game__result");
 
@@ -23,6 +28,20 @@ export default class ResultGameView {
 		playerPick.appendChild(playerImgContainer);
 		playerContainer.appendChild(playerPick);
 
+		const buttonContainer = document.createElement("div");
+		buttonContainer.classList.add("info__container");
+
+		const buttonText = document.createElement("span");
+		buttonText.classList.add("info__text");
+		buttonText.innerText = text;
+		buttonContainer.appendChild(buttonText);
+
+		const playAgainButton = document.createElement("button");
+		playAgainButton.classList.add("btn__play-again");
+		playAgainButton.innerText = "play again";
+		playAgainButton.addEventListener("click", playAgain);
+		buttonContainer.appendChild(playAgainButton);
+
 		const AIContainer = document.createElement("div");
 		AIContainer.classList.add("ai__container");
 
@@ -44,6 +63,7 @@ export default class ResultGameView {
 		AIContainer.appendChild(AIPick);
 
 		resultGameSection.appendChild(playerContainer);
+		resultGameSection.appendChild(buttonContainer);
 		resultGameSection.appendChild(AIContainer);
 
 		return resultGameSection;
