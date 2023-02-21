@@ -1,4 +1,5 @@
-"use strict";
+import Game from "./classes/Game.js";
+const game = new Game(0);
 const rulesOpenBtn = document.querySelector(".rules-btn");
 const rulesCloseBtn = document.querySelector(".rules-btn--close");
 rulesOpenBtn.addEventListener("click", () => {
