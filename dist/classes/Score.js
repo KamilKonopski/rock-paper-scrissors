@@ -7,11 +7,14 @@ export default class Score {
         return this.score;
     }
     updateScore(isUserWin) {
+        if (this.score < 0) {
+            return (this.score = 0);
+        }
         if (isUserWin) {
-            this.score++;
+            return this.score++;
         }
         else if (!isUserWin && isUserWin !== null) {
-            this.score--;
+            return this.score--;
         }
         else {
             return;
