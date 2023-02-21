@@ -51,7 +51,11 @@ export default class Game {
 
 		this.score.updateScore(winner);
 
-		this.scoreText.innerText = this.score.getScore().toString();
+		if (this.score.getScore() < 0) {
+			this.scoreText.innerText = "0";
+		} else {
+			this.scoreText.innerText = this.score.getScore().toString();
+		}
 	}
 
 	playAgain() {

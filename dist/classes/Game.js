@@ -32,7 +32,12 @@ export default class Game {
         (_b = document
             .querySelector(".main")) === null || _b === void 0 ? void 0 : _b.appendChild(ResultGameView.createResultGameView(playerPick, aiPick, winnerText, this.playAgain));
         this.score.updateScore(winner);
-        this.scoreText.innerText = this.score.getScore().toString();
+        if (this.score.getScore() < 0) {
+            this.scoreText.innerText = "0";
+        }
+        else {
+            this.scoreText.innerText = this.score.getScore().toString();
+        }
     }
     playAgain() {
         var _a, _b;
