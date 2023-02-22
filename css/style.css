@@ -77,16 +77,44 @@ html {
 }
 
 .game__start {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.game__start {
+    display: block;
     aspect-ratio: 313 / 278;
     background-image: url('../images/bg-triangle.svg');
     background-size: cover;
-    width: 50%;
-    margin: 0 auto;
     position: relative;
+}
+
+.game__start.hidden {
+    display: none;
 }
 
 .game__start .btn {
     position: absolute;
+    cursor: pointer;
+    width: 50%;
+}
+
+.game__start .btn--paper {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.game__start .btn--scissors {
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.game__start .btn--rock {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .btn {
@@ -96,8 +124,7 @@ html {
     align-items: center;
     border-radius: 50%;
     aspect-ratio: 1/1;
-    cursor: pointer;
-    width: 50%;
+    width: 100%;
 }
 
 .btn img {
@@ -116,23 +143,30 @@ html {
 
 .btn--paper {
     background: linear-gradient(var(--paper-gradient));
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
 }
 
 .btn--scissors {
     background: linear-gradient(var(--scissors-gradient));
-    top: 0;
-    right: 0;
-    transform: translate(50%, -50%);
 }
 
 .btn--rock {
     background: linear-gradient(var(--rock-gradient));
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+}
+
+.game__result {
+    align-items: center;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.game__result .pick__container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    align-items: center;
+    gap: 20px;
 }
 
 .rules-btn {
