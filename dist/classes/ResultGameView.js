@@ -20,7 +20,7 @@ export default class ResultGameView {
     }
     static createPickElement(pick, text) {
         const containerElement = document.createElement("div");
-        containerElement.classList.add(`${pick}__container`);
+        containerElement.classList.add("pick__container");
         const headingElement = document.createElement("span");
         headingElement.classList.add(`${pick}__heading`);
         headingElement.textContent = text;
