@@ -30,7 +30,7 @@ export default class ResultGameView {
         const imgContainerElement = document.createElement("div");
         imgContainerElement.classList.add("btn__image-container");
         const imgElement = document.createElement("img");
-        imgElement.src = `../../images/icon-${pick}.svg`;
+        imgElement.src = `/images/icon-${pick}.svg`;
         imgElement.alt = pick;
         imgContainerElement.appendChild(imgElement);
         pickElement.appendChild(imgContainerElement);
