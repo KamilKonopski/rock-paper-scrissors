@@ -36,7 +36,7 @@ export default class ResultGameView {
 		containerElement.classList.add("pick__container");
 
 		const headingElement = document.createElement("span");
-		headingElement.classList.add(`${pick}__heading`);
+		headingElement.classList.add("pick__heading");
 		headingElement.textContent = text;
 		containerElement.appendChild(headingElement);
 

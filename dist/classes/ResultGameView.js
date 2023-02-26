@@ -22,7 +22,7 @@ export default class ResultGameView {
         const containerElement = document.createElement("div");
         containerElement.classList.add("pick__container");
         const headingElement = document.createElement("span");
-        headingElement.classList.add(`${pick}__heading`);
+        headingElement.classList.add("pick__heading");
         headingElement.textContent = text;
         containerElement.appendChild(headingElement);
         const pickElement = document.createElement("div");
